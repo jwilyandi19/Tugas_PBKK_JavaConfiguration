@@ -9,7 +9,7 @@ public class MainApplication {
 		System.out.println("Java Configuration Example");
 		
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(OperationConfig.class);
-		//Annotation
+		//JavaConfig
 		Operation operationDiv =  context.getBean("divOperation", Operation.class);
 		DivOperation op1 = (DivOperation)operationDiv;
 		op1.setNum1(12);
@@ -17,7 +17,7 @@ public class MainApplication {
 		op1.setMessage("Pembagian");
 		System.out.println(op1.returnMessage());
 		
-		//Annotation + AutoWired
+		//JavaConfig DI
 		Operation operationMul =  context.getBean("mulOperation", Operation.class);
 		MulOperation op2 = (MulOperation)operationMul;
 		op2.setNum1(12);
@@ -25,7 +25,7 @@ public class MainApplication {
 		System.out.println(op2.returnMessage() + ' ' +
 				op2.getMessage().returnMessage());
 		
-		//Annotation + AutoWired
+		//JavaConfig DI
 		Operation operationAdd =  context.getBean("addOperation", Operation.class);
 		AddOperation op3 = (AddOperation)operationAdd;
 		op3.setNum1(12);
@@ -33,7 +33,7 @@ public class MainApplication {
 		System.out.println(op3.returnMessage() + ' ' +
 				op3.getMessage().returnMessage());
 		
-		//Annotation
+		//JavaConfig
 		Operation operationSub =  context.getBean("subOperation", Operation.class);
 		SubOperation op4 = (SubOperation)operationSub;
 		op4.setNum1(12);
